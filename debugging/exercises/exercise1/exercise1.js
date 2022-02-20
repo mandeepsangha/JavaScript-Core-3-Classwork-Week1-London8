@@ -1,20 +1,22 @@
 let launchReady = false;
 let fuelLevel = 22000;
+// eslint-disable-next-line no-unused-vars
 let thrustOn = false;
 let secondsTolaunch = 10;
 let interval;
+
 
 const countDown = () => {
   console.log(secondsTolaunch--);
   switch (secondsTolaunch) {
     case 7:
-      console.log('Close Davy Jones' Locker..');
+      console.log("Close Davy Jones Locker..");
       break;
     case 3:
-      console.log('Ignition...');
+      console.log("Ignition...");
       break;
     case 0:
-      console.log('Liftoff!');
+      console.log("Liftoff!");
       clearInterval(interval);
       break;
     default:
@@ -25,10 +27,10 @@ const countDown = () => {
 
 
 if (fuelLevel >= 20000) {
-   console.log(('Fuel level cleared.');
+   console.log("Fuel level cleared.");
    launchReady = true;
 } else {
-   console.log('WARNING: Insufficient fuel!');
+   console.log("WARNING: Insufficient fuel!");
    launchReady = false;
 }
 if (launchReady){
